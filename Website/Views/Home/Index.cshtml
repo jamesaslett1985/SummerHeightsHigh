@@ -1,15 +1,17 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model Website.Models.Movie
 
-<div class="text-center">
+<!DOCTYPE html>
 
-    <p>Welcome to the Summer Heights High character lookup system.</p>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@Model.Title</title>
+</head>
+<body>
 
-    <p>Please enter a character name from the following:</p>
+    @await Html.PartialAsync("_Greeting")
 
-    @*Dropdown with available character names*@
+    The movie <b>@Model.Title</b> was released @Model.ReleaseDate.ToLongDateString()
 
-    @*When option selected output chosen character info to page*@
-
-</div>
+</body>
+</html>
