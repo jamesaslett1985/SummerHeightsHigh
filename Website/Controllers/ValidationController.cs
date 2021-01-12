@@ -10,18 +10,19 @@ namespace Website.Controllers
     public class ValidationController : Controller
     {
         [HttpGet]
-        public IActionResult SimpleValidation()
+        public IActionResult Index()
         {
+
             return View();
         }
 
         [HttpPost]
-        public IActionResult SimpleValidation(ModelBindingExample webUser)
+        public IActionResult Index (WebUser webUser)
         {
             if (ModelState.IsValid)
                 return Content("Thank you!");
             else
-                return Content("Model could not be validated!");
+                return View(webUser);
         }
 
     }

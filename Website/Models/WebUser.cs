@@ -3,11 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Website.Models
 {
-    public class ModelBindingExample
+    public class WebUser
     {
         [Required]
         [StringLength(25)]
-        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required]
